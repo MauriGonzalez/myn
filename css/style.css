@@ -1,0 +1,268 @@
+body{ 
+    text-align:center;
+    padding: 0px;
+    margin: 0px;
+    font-family: segoe ui;
+}
+#header {
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    border-top: 5px solid orange;
+   
+    
+}
+
+/*-------------------------------------------*/
+
+#logo {
+    margin-top: 30px;
+    width: 30%;
+    font-size: 30px;
+    float: left;
+}
+#logo img {
+    display: block; /*para manipularlo , flotaretc */
+    height: 60px;
+    float: left;
+    
+}
+#brand {
+    display: block;
+    float: left;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+.center {/*centrar todo el conrtnido*/
+width : 75% ;
+margin: 0px auto; /*centra todo*/
+}
+
+/*----------------------------------*/
+
+#menu {
+    
+}
+#menu ul {
+    line-height: 85px; /*altura del elemento*/
+    float: right;
+    width: 60%;
+}
+#menu ul li {
+    display: inline-block; /*pone un elemento al lado del otro*/
+    height: 46px;
+    margin-left: 15px;
+    margin-right: 15px; /*separamos los li*/
+}
+#menu ul li a:hover {
+    color: orange;
+}
+#menu ul li a {
+    color:black;
+    text-decoration: none;
+    list-style: none; /*sacar puntos*/
+    transition: 400ms all; /*efecto aparecer color*/
+    font-size: 19px;
+}
+#clearfix {
+    clear: both;
+    float: none;
+  /*este no permite que elementos se colen en el header*/
+}
+
+/*vamos hacer que el logotipo gire*/
+#logo img {
+animation: girar infinite 20s linear;
+    
+}
+/*key frame ,es una animacion*/
+@keyframes girar  {
+    from {
+       transform: rotate(0deg);
+    }
+   to {
+        transform: rotate(360deg);
+    }
+}
+/*--------------slider index--------------------*/
+
+#slider.slider-big {
+
+    width: 100%;
+    height: 400px;
+   /* line-height: 320px; para que se quede en el medio el texto, pero no nos deja añadir el boton 'ir al blog*/
+    color: white;
+    text-shadow: 0px 0px 5px #444; /*es la sombra*/
+
+    /* https://www.cssmatic.com/ */
+background: rgba(255,175,75,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(50%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+}
+
+
+#slider h1 {
+    margin-top: 0.2px; /*corrige error*/
+    padding: 0px;
+    padding-top:138px;
+    text-align: center;
+}
+
+
+/*------------------------------slider blog----------------------------------------*/
+/*id + clase*/
+#slider.slider-small {
+    /*css*/
+    background: rgba(255,175,75,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(50%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+    /*css*/
+    
+    height: 150px;
+}
+/*id + clase + h1 */
+#slider.slider-small h1 {
+    margin-top: 0.2px; /*corrige error*/
+    padding: 0px;
+    padding-top:50px;
+}
+
+
+/*--------------articulos --------------------*/
+
+
+/* ya toma las propiedades de center*/
+
+#content {
+    margin-top: 10px;
+    width: 70%;
+    float: left;
+    border: 1px solid #ccc;
+    min-height: 650px; /*altura minima*/
+    /*box-shadow: 0px 0px 5px #444;*/
+}
+#sidebar {
+    width: 25%;
+    float: left; /*pegar a content*/
+    margin-left: 20px;
+   
+}
+
+.sidebar-item {
+    background: #f7f7f7;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.sidebar-item h1 {
+    text-transform: uppercase; /*todo a mayuscula*/
+    font-size: 18px;
+    margin: 0px;
+}
+
+.sidebar-item h3 {
+    border-bottom: 3px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-item .btn{ 
+margin-top: 10px;/*no surte eefecto porque el boton no es un bloque*/
+    margin: 0px auto;/*centramos el contenido*/
+}
+.btn{
+    display: block;
+    background: black;
+    color: white;
+    padding: 15px;
+    font-weight: bold;/*remarca la letra*/
+    text-transform: uppercase;/*mayuscula*/
+    font-size: 14px;/*agrandar letra*/
+    text-decoration: none;
+    max-width: 118px; /*achicamos y el elemento se descentra*/
+    border: none;/*quitamos los bordes del submit*/
+    cursor: pointer;/*al momento de hacer click haga efecto*/
+}
+.btn:hover{
+    background: green;
+    transition: 300ms all;
+}
+
+/*input*/
+input[type="text"]{
+    width: 100%;
+    height:30px ;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding: 3px;
+    
+}
+/*sombreado dentro del imput*/
+input[type="text"]:focus{
+    box-shadow: 0px 0px 5px #444 inset;
+    transition: 300ms all;
+}
+
+
+
+/*------------footer------------------*/
+footer{
+    background: #f7f7f7;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    color: #444;
+     }
+
+footer p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#btnn{
+    background: black;
+    display: block;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin: 0px auto
+    font-weight: bold;/*remarca la letra*/
+    text-transform: uppercase;/*mayuscula*/
+    font-size: 14px;/*agrandar letra*/
+    text-decoration: none;
+    max-width: 118px; /*achicamos y el elemento se descentra*/
+    border: none;/*quitamos los bordes del submit*/
+    cursor: pointer;/*al momento de hacer click haga efecto*/
+}
+#btnn:hover{
+    background: green;
+    transition: 300ms all;
+}
+
+#boton {
+    display: block;
+    background: white;
+    padding: 10px;
+    width: 100px;
+    margin: 0px auto; /*centrar*/
+    text-transform: uppercase ; /* a mayusucula*/
+    box-shadow: 0px 0px 5px #444; /*sombra al boton*/
+    margin-top: 40px;
+    border-radius: 4px; /*redondear boton*/
+    transition: 300ms all;
+}
+
+
+/*--login------------------------*/
