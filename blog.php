@@ -1,6 +1,6 @@
  <div class="clearfix"></div>
  <div id="slider" class="slider-small">
-        <h1>Blog</h1>
+        <h1>C R U D</h1>
     </div>
     <div class="center">
            <section id="content">

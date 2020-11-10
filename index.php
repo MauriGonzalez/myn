@@ -10,7 +10,7 @@ include($_GET['pagina'].'.php');
 ?>
 
 <div id="slider" class="slider-big">
-	<h1>Bienvenidos a MyN indumentaria</h1>
+	<h1>Bienvenidos a MyN indumentaria ;)</h1>
 	<a href="?pagina=blog" style="text-decoration: none; color: white">IR AL BLOG</a>
 </div> 
 

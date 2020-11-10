@@ -2,11 +2,11 @@
 
 class usuarios
 {
-	private $usuID;
+
 	private $clave;
 	private $usuario;
 	private $email;
-	private $activado;
+	
 
 	private function crearUsuario()
 	{

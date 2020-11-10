@@ -21,8 +21,8 @@
             <ul>
                 <li><a href="?">Inicio</a></li>
                 <li><a href="?pagina=Blog">Blog</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="?pagina=vistaRegister">Crear Cuenta</a></li>
+                <li><a href="pagina=Contacto">Contacto</a></li>
+                <li><a href="?pagina=vistaRegister">Registrate</a></li>
                 <li><a href="?pagina=vistaLogin">Login</a></li>
             </ul>
         </nav>                 
