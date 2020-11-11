@@ -89,8 +89,10 @@
   color: #EF3B3A;
 }
 .login-page {
-   width: 100%;
-    height: 400px;
+
+  padding-top: 0px;
+  width: 100%;
+  height: 400px;
   background: rgba(255,175,75,1);
 background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(50%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
@@ -99,3 +101,4 @@ background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgb
 background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
 background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 50%, rgba(255,146,10,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+}

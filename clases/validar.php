@@ -78,3 +78,6 @@ function validar( $password , $repassword , $email , $usuario )
 
 	}
 }	
+
+
+					

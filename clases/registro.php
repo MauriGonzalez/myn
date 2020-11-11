@@ -28,24 +28,30 @@ if ( !empty($_POST) )
 			if( $password_comparacion == true ) # si coincide con el hash insertamos query
 			{
 
-			
+			$usuID = null;
+			$activado=null;
+			$fecha=null;
+				
 				$pdo = new PDO("mysql:host=localhost;dbname=myndb","root","");
-				$sql = "INSERT INTO usuarios (usuID,clave,usuario,email,activado,productos,fecha) VALUES(null,:clave,:usuario,:email,null,null,null)";
+				$sql = 'INSERT INTO usuarios (usuID,clave,usuario,email,activado,fecha) VALUES(:usuID,:clave,:usuario,:email,:activado,:fecha)';
 
 				$stmt = $pdo->prepare($sql);
 
-				$stmt->bindParam(":clave",$password_cifrada);
-				$stmt->bindParam(":usuario",$usuario);
-				$stmt->bindParam(":email",$email);
+				$stmt->bindParam(':usuID',$usuID);
+				$stmt->bindParam(':clave',$password_cifrada);
+				$stmt->bindParam(':usuario',$usuario);
+				$stmt->bindParam(':email',$email);
+				$stmt->bindParam(':activado',$activado);
+				$stmt->bindParam(':fecha',$fecha);
 			
-				if($stmt->execute())
+				if($stmt -> execute())
 				{
-
-				var_dump($stmt);
 
 				$guardar_usuario = true;
 
-				echo "usuario guardado";	
+				echo "usuario guardado";
+
+				#header("refresh: 1; ?");	
 				
 				}else{
 					echo "no se guardo el usuario";
@@ -53,7 +59,7 @@ if ( !empty($_POST) )
 				
 
 				
-				#header("refresh: 3; index.php");
+				
 			}
 			else{
 
