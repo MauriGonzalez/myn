@@ -1,11 +1,13 @@
 <?php
 
 require 'validar.php';
+require 'conexion.php';
 
-session_start();
 
 if ( !empty($_POST) ) 
 {
+	#para que todo lo que entre sea comillas dobles o otros caracteres no lo tome como conslta y nos puedan hackear
+	# mysqli_real_scape_string($db , variable ) NO SIRVE , ELIMINADO EN EL PHP 5.0
 	
 	$password   =	!empty($_POST['password'])  ? $_POST['password'] : false ;
 	$repassword =	!empty($_POST['repassword'])  ? $_POST['repassword'] : false ;
@@ -32,7 +34,7 @@ if ( !empty($_POST) )
 			$activado=null;
 			$fecha=null;
 				
-				$pdo = new PDO("mysql:host=localhost;dbname=myndb","root","");
+				$pdo = conexion::conectar();
 				$sql = 'INSERT INTO usuarios (usuID,clave,usuario,email,activado,fecha) VALUES(:usuID,:clave,:usuario,:email,:activado,:fecha)';
 
 				$stmt = $pdo->prepare($sql);

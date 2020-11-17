@@ -8,13 +8,11 @@ class conexion {
 	private $password = '';
 
 	public function __construct () 
-	{
-
-	}
+	{}#para que no se le pasen parametros
 
 	static function conectar() 
 	{
-	$pdo = new PDO("mysql:host=localhost;dbname=myn_indumentaria","root",""); 
+	$pdo = new PDO("mysql:host=localhost;dbname=myndb","root",""); 
 	return $pdo ;
 	}
 	
