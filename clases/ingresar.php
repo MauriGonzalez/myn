@@ -1,5 +1,7 @@
 <?php
 
+#AGREGANDO PHPmailer clase 11 , min 53:00
+
 require 'conexion.php';
  
 if ( !empty($_POST) ) 
